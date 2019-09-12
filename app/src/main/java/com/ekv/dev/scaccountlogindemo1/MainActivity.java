@@ -2,7 +2,6 @@ package com.ekv.dev.scaccountlogindemo1;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,13 +13,12 @@ import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
 import com.facebook.Profile;
 import com.facebook.ProfileTracker;
+import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 
-import java.util.Arrays;
 import java.util.Collections;
 
 public class MainActivity extends MainActivityPresenter {
@@ -34,7 +32,7 @@ public class MainActivity extends MainActivityPresenter {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FacebookSdk.sdkInitialize(this.getApplicationContext());
+        AppEventsLogger.activateApp(getApplication());
         callbackManager = CallbackManager.Factory.create();
 
         accessTokenTracker= new AccessTokenTracker() {
