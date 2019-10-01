@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">SCAccountLogInDemo1</string>
-    <string name="facebook_app_id">916979415336260</string>
-    <string name="fb_login_protocol_scheme">fb916979415336260</string>
+    <string name="app_name" translatable="false">SCAccountLogInDemo1</string>
+    <string name="facebook_app_id" translatable="false">916979415336260</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb916979415336260</string>
+
+    <string name="gp_WebApp_ClientId" translatable="false">113264447668-l6el2n7jpdeomjsb9hdonoutdg52c2j1.apps.googleusercontent.com</string>
+    <string name="gp_WebApp_ClientSecret" translatable="false">T9hJ-s8SBwwF9F-N4VG1hbvA</string>
 </resources>

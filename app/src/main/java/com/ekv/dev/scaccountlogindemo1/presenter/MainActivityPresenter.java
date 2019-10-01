@@ -1,7 +1,5 @@
 package com.ekv.dev.scaccountlogindemo1.presenter;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
@@ -9,40 +7,26 @@ import android.os.Environment;
 import android.util.Base64;
 import android.util.Log;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.ekv.dev.scaccountlogindemo1.MainActivity;
+
 import java.io.BufferedWriter;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.ref.WeakReference;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateEncodingException;
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.util.Arrays;
-import java.util.List;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
-import android.util.Log;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.ekv.dev.scaccountlogindemo1.MainActivity;
-import com.ekv.dev.scaccountlogindemo1.presenter.MainActivityPresenter;
-import com.facebook.AccessToken;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
-import com.facebook.login.LoginResult;
-
-import java.io.File;
-import java.io.IOException;
-import java.lang.ref.WeakReference;
-import java.security.cert.CertificateEncodingException;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.logging.Level;

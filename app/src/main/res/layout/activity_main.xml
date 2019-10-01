@@ -5,15 +5,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <com.facebook.login.widget.LoginButton
-        android:id="@+id/login_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:id="@+id/facebook_log_in"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/facebook_log_in_btn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:drawableStart="@drawable/facebook_icon"
+        android:text="Facebook Log In"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"/>
+
+    <Button
+        android:id="@+id/google_log_in"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="6dp"
+        android:text="Google Sign In"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:drawableStart="@drawable/google_icon"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
         />
 
     <TextView
@@ -23,6 +51,17 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16dp"
         android:id="@+id/tv_result"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="......"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16dp"
+        android:id="@+id/tv_result1"
+        android:layout_marginTop="15dp"
         />
 
 </LinearLayout>
